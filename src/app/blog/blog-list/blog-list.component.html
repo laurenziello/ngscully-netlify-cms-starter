@@ -9,15 +9,13 @@
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ blog.title || blog.route }}</mat-card-title>
-      <!-- <mat-card-subtitle>{{ blog.published | date: 'shortDate' }}</mat-card-subtitle> -->
+      <mat-card-subtitle>{{ blog.date | date: 'shortDate' }}</mat-card-subtitle>
     </mat-card-header>
+    <img mat-card-image [src]="blog.thumbnail" alt="Photo of a Shiba Inu" />
     <mat-card-content>
       <p>
         {{ blog.description }}
       </p>
     </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-button color="primary">Read More</button>
-    </mat-card-actions>
   </mat-card>
 </div>
